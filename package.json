@@ -4,15 +4,12 @@
 	"description": "landing page for natours",
 	"main": "index.js",
 	"scripts": {
-		"compile:sass": "sass --watch src/sass/main.scss:css/style.css",
-		"dev": "parcel src/index.html",
-		"build": "parcel build src/index/html"
+		"compile:sass": "sass --watch src/sass/main.scss:css/style.css"
 	},
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
 		"@parcel/transformer-sass": "^2.9.3",
-		"parcel": "^2.9.3",
 		"sass": "^1.63.6"
 	}
 }
