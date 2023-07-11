@@ -1,6 +1,7 @@
 @use '../abstracts' as *;
 
 .btn {
+	&,
 	&:link,
 	&:visited {
 		font-size: $default-font-size;
@@ -11,6 +12,10 @@
 		border-radius: 10rem;
 		transition: all 0.2s;
 		position: relative;
+
+		// Change the default for the <button> element
+		border: none;
+		cursor: pointer;
 	}
 
 	&:hover {
@@ -24,9 +29,12 @@
 		}
 	}
 
-	&:active {
+	&:active,
+	&:focus {
 		transform: translateY(-1px);
 		box-shadow: $box-shadow-light;
+
+		outline: $border-thin $color-secondary-dark;
 	}
 
 	&--white {
@@ -73,7 +81,7 @@
 		color: $color-primary;
 		display: inline-block;
 		text-decoration: none;
-		border-bottom: $border-bottom-thin $color-primary;
+		border-bottom: $border-thin $color-primary;
 		padding: 0.3rem;
 		transition: all 0.2s;
 	}

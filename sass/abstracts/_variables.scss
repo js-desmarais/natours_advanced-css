@@ -66,8 +66,9 @@ $gutter-horizontal: 6rem;
 $border-radius-thin: 2px;
 $border-radius-default: 3px;
 
-$border-bottom-thin: 1px solid;
-$border-bottom-default: 3px solid;
+$border-thin: 1px solid;
+$border-default: 3px solid;
+$border-thick: 5px solid;
 
 $box-shadow-light: 0 0.5rem 2rem rgba($color-black, 0.2);
 $box-shadow-regular: 0 1rem 2rem rgba($color-black, 0.2);
