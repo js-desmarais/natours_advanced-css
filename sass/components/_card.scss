@@ -16,9 +16,9 @@
 		left: 0;
 		width: 100%;
 		backface-visibility: hidden;
-		border-radius: 3px;
+		border-radius: $border-radius-default;
 		overflow: hidden;
-		box-shadow: 0 1.5rem 4rem rbga($color-black, 0.15);
+		box-shadow: $box-shadow-bold;
 
 		&--front {
 			background-color: $color-white;
@@ -116,7 +116,7 @@
 				padding: 1rem;
 
 				&:not(:last-child) {
-					border-bottom: 1px solid $color-grey-light-2;
+					border-bottom: $border-bottom-thin $color-grey-light-2;
 				}
 			}
 		}
