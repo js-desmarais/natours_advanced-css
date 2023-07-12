@@ -17,6 +17,17 @@ body {
 }
 
 a {
+	&,
+	&:link,
+	&:visited {
+		text-decoration: none;
+	}
+
+	&:active,
+	&:hover {
+		text-decoration: underline;
+	}
+
 	&:focus {
 		outline: $border-thin $color-secondary-dark;
 	}

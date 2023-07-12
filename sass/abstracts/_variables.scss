@@ -7,6 +7,10 @@ $color-primary-gradient: linear-gradient(
 	$color-primary-light,
 	$color-primary-dark
 );
+$color-primary-radial-gradient: radial-gradient(
+	$color-primary-light,
+	$color-primary-dark
+);
 $color-primary-gradient-transparent: linear-gradient(
 	to right bottom,
 	rgba($color-primary-light, 0.8),
