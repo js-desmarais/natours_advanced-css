@@ -1,8 +1,6 @@
 @use '../abstracts' as *;
 
 .navigation {
-	background-color: orangered;
-
 	&__checkbox {
 		display: none;
 	}
@@ -17,6 +15,8 @@
 		right: 6rem;
 		z-index: 2000;
 		box-shadow: $box-shadow-regular;
+		text-align: center;
+		cursor: pointer;
 	}
 
 	&__background {
@@ -89,6 +89,7 @@
 		}
 	}
 
+	/// Functionality
 	&__checkbox:checked ~ &__background {
 		transform: scale(80);
 	}
@@ -96,5 +97,55 @@
 	&__checkbox:checked ~ &__nav {
 		opacity: 1;
 		width: 100%;
+	}
+
+	/// Icon
+	&__icon {
+		position: relative;
+		margin-top: 3.5rem;
+
+		&,
+		&::before,
+		&::after {
+			width: 3rem;
+			height: 2px;
+			background-color: $color-grey-dark-3;
+			display: inline-block;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			transition: all 0.2s;
+		}
+
+		&::before {
+			top: -0.8rem;
+		}
+
+		&::after {
+			top: 0.8rem;
+		}
+	}
+	&__btn:hover &__icon::before {
+		top: -1rem;
+	}
+
+	&__btn:hover &__icon::after {
+		top: 1rem;
+	}
+
+	&__checkbox:checked + &__btn &__icon {
+		background-color: transparent;
+	}
+	&__checkbox:checked + &__btn &__icon::before {
+		top: 0;
+		transform: rotate(135deg);
+	}
+	&__checkbox:checked + &__btn &__icon::after {
+		top: 0;
+		transform: rotate(-135deg);
 	}
 }
