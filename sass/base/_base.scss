@@ -9,7 +9,21 @@
 }
 
 html {
-	font-size: 62.5%; // NOTE this defines what 1rem is
+	font-size: 62.5%; // NOTE this defines what 1rem is. 10px.
+
+	@include respond($tab-land) {
+		font-size: base-font-size(9px);
+		@include respond($tab-port) {
+			font-size: base-font-size(8px);
+			@include respond($phone) {
+				font-size: base-font-size(7px);
+			}
+		}
+	}
+
+	@include respond($big-desktop) {
+		font-size: base-font-size(12px);
+	}
 }
 
 body {
