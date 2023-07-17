@@ -52,19 +52,14 @@ $color-grey-dark-3: #333;
 $color-white: #fff;
 $color-black: #000;
 
-$solid-white-gradient: linear-gradient(
-	105deg,
-	rgba($color-white, 0.9),
-	rgba($color-white, 0.9) 50%,
-	transparent 50%
-);
-
 /// Font
 $default-font-size: 1.6rem;
+$reduced-font-size: 1.2rem;
 
 /// Grid
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
+$gutter-vertical-sm: 6rem;
 $gutter-horizontal: 6rem;
 
 /// Borders and Shadows
