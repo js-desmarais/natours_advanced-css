@@ -36,36 +36,6 @@
     translate: 0;
   }
 }
-/* @mixin respond($breakpoint) {
-	@if $breakpoint == tab-port {
-		// 900px
-		@media (max-width: 56.25em) {
-			@content;
-		}
-	}
-
-	@if $breakpoint == tab-land {
-		// 1200px
-		@media (max-width: 75em) {
-			@content;
-		}
-	}
-
-	@if $breakpoint == phone {
-		// 600px
-		@media (max-width: 37.5em) {
-			@content;
-		}
-	}
-
-	// 1800px
-	@if $breakpoint == big-desktop {
-		@media (min-width: 112.5em) {
-			@content;
-		}
-	}
-}
- */
 *,
 *::after,
 *::before {
@@ -195,6 +165,16 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+@media (max-width: 56.25em) {
+  .heading-tertiary {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 56.25em) and (max-width: 37.5em) {
+  .heading-tertiary {
+    font-size: 1rem;
+  }
 }
 
 .paragraph {
@@ -822,6 +802,17 @@ body {
   transform: translate(-50%, -50%) scale(0.2);
   transition: all 0.5s 0.2s;
 }
+@media (max-width: 75em) {
+  .popup__content {
+    width: 90%;
+  }
+}
+@media (max-width: 75em) and (max-width: 56.25em) {
+  .popup__content {
+    display: block;
+    width: 75%;
+  }
+}
 .popup__left {
   width: 34%;
   display: table-cell;
@@ -832,9 +823,37 @@ body {
   vertical-align: middle;
   padding: 3rem 5rem;
 }
+@media (max-width: 56.25em) {
+  .popup__left {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+  .popup__right {
+    width: 100%;
+    text-align: center;
+  }
+  .popup__right > .popup__text {
+    text-align: left;
+  }
+}
 .popup__img {
   display: block;
   width: 100%;
+}
+@media (max-width: 56.25em) {
+  .popup__img {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    height: 22rem;
+    object-fit: cover;
+  }
+  .popup__img::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 .popup__text {
   font-size: 1.4rem;
@@ -843,6 +862,11 @@ body {
   column-gap: 4rem;
   column-rule: 1px solid #eee;
   hyphens: auto;
+}
+@media (max-width: 37.5em) {
+  .popup__text {
+    column-count: 1;
+  }
 }
 .popup:target {
   opacity: 1;
@@ -932,13 +956,18 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(128, 214, 113, 0.8), rgba(39, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(128, 214, 113, 0.8), rgba(39, 180, 133, 0.8)), url(../img/hero-small.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
   /* NOTE To clip a polygon of the background image */
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+@media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+  .header {
+    background-image: linear-gradient(to right bottom, rgba(128, 214, 113, 0.8), rgba(39, 180, 133, 0.8)), url(../img/hero.jpg);
+  }
 }
 @media (max-width: 75em) {
   .header {

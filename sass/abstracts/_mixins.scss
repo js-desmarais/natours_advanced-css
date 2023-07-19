@@ -15,7 +15,7 @@
 }
 
 /// Media queries
-$phone: 600px;
+$phone: 600px; // 37.5em
 $tab-port: 900px;
 $tab-land: 1200px;
 $big-desktop: 1800px;
@@ -32,34 +32,3 @@ $big-desktop: 1800px;
 		}
 	}
 }
-
-/* @mixin respond($breakpoint) {
-	@if $breakpoint == tab-port {
-		// 900px
-		@media (max-width: 56.25em) {
-			@content;
-		}
-	}
-
-	@if $breakpoint == tab-land {
-		// 1200px
-		@media (max-width: 75em) {
-			@content;
-		}
-	}
-
-	@if $breakpoint == phone {
-		// 600px
-		@media (max-width: 37.5em) {
-			@content;
-		}
-	}
-
-	// 1800px
-	@if $breakpoint == big-desktop {
-		@media (min-width: 112.5em) {
-			@content;
-		}
-	}
-}
- */
