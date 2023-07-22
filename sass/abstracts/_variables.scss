@@ -7,6 +7,10 @@ $color-primary-gradient: linear-gradient(
 	$color-primary-light,
 	$color-primary-dark
 );
+$color-primary-radial-gradient: radial-gradient(
+	$color-primary-light,
+	$color-primary-dark
+);
 $color-primary-gradient-transparent: linear-gradient(
 	to right bottom,
 	rgba($color-primary-light, 0.8),
@@ -42,14 +46,37 @@ $color-tertiary-gradient-transparent: linear-gradient(
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
 
-$color-grey-dark: #777;
+$color-grey-dark-1: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
 $color-white: #fff;
 $color-black: #000;
 
 /// Font
 $default-font-size: 1.6rem;
+$reduced-font-size: 1.2rem;
 
 /// Grid
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
+$gutter-vertical-sm: 6rem;
 $gutter-horizontal: 6rem;
+
+/// Borders and Shadows
+$border-radius-thin: 2px;
+$border-radius-default: 3px;
+
+$border-thin: 1px solid;
+$border-default: 3px solid;
+$border-thick: 5px solid;
+
+$box-shadow-light: 0 0.5rem 2rem rgba($color-black, 0.2);
+$box-shadow-regular: 0 1rem 2rem rgba($color-black, 0.2);
+$box-shadow-bold: 0 1.5rem 4rem rgba($color-black, 0.15);
+$box-shadow-heavy: 0 3rem 6rem rgba($color-black, 0.1);
+
+/// Breakpoints
+$phone: 600px; // 37.5em
+$tab-port: 900px;
+$tab-land: 1200px;
+$big-desktop: 1800px;

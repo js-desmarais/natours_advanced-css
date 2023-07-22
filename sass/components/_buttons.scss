@@ -1,6 +1,7 @@
 @use '../abstracts' as *;
 
 .btn {
+	&,
 	&:link,
 	&:visited {
 		font-size: $default-font-size;
@@ -11,11 +12,15 @@
 		border-radius: 10rem;
 		transition: all 0.2s;
 		position: relative;
+
+		// Change the default for the <button> element
+		border: none;
+		cursor: pointer;
 	}
 
 	&:hover {
 		transform: translateY(-0.3rem);
-		box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+		box-shadow: $box-shadow-regular;
 
 		&::after {
 			/* transform: scale(1.5); */
@@ -24,14 +29,17 @@
 		}
 	}
 
-	&:active {
+	&:active,
+	&:focus {
 		transform: translateY(-1px);
-		box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+		box-shadow: $box-shadow-light;
+
+		outline: $border-thin $color-secondary-dark;
 	}
 
 	&--white {
 		background-color: $color-white;
-		color: $color-grey-dark;
+		color: $color-grey-dark-1;
 
 		&::after {
 			background-color: $color-white;
@@ -73,7 +81,7 @@
 		color: $color-primary;
 		display: inline-block;
 		text-decoration: none;
-		border-bottom: 0.1rem solid $color-primary;
+		border-bottom: $border-thin $color-primary;
 		padding: 0.3rem;
 		transition: all 0.2s;
 	}
@@ -81,12 +89,12 @@
 	&:hover {
 		background-color: $color-primary;
 		color: $color-white;
-		box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+		box-shadow: $box-shadow-regular;
 		transform: translateY(-2px);
 	}
 
 	&:active {
-		box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+		box-shadow: $box-shadow-light;
 		transform: translateY(0);
 	}
 }

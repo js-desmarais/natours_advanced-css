@@ -6,6 +6,8 @@
 	-moz-perspective: 150rem;
 	position: relative;
 	height: 52rem;
+	border-radius: $border-radius-default;
+	overflow: hidden;
 
 	&__side {
 		font-size: 2rem;
@@ -16,9 +18,8 @@
 		left: 0;
 		width: 100%;
 		backface-visibility: hidden;
-		border-radius: 3px;
-		overflow: hidden;
-		box-shadow: 0 1.5rem 4rem rbga($color-black, 0.15);
+		// border-radius: $border-radius-default;
+		box-shadow: $box-shadow-bold;
 
 		&--front {
 			background-color: $color-white;
@@ -116,7 +117,7 @@
 				padding: 1rem;
 
 				&:not(:last-child) {
-					border-bottom: 1px solid $color-grey-light-2;
+					border-bottom: $border-thin $color-grey-light-2;
 				}
 			}
 		}
@@ -146,5 +147,51 @@
 	&__price-value {
 		font-size: 6rem;
 		font-weight: 200;
+	}
+
+	// @include respond($tab-port) {
+	@media only screen and (max-width: calc-em($tab-port)),
+		only screen and (hover: none) {
+		height: auto;
+		background-color: $color-white;
+		box-shadow: $box-shadow-bold;
+
+		&__side {
+			height: auto;
+			position: relative;
+			transition: all 0.8s ease;
+			font-size: $default-font-size;
+			box-shadow: none;
+
+			&--back {
+				transform: rotateY(0);
+				clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+			}
+		}
+
+		&:hover &__side--front {
+			transform: rotateY(0);
+		}
+
+		&:hover &__side--back {
+			transform: rotateY(0);
+		}
+
+		&__details {
+			padding: 1rem 2rem;
+		}
+
+		&__cta {
+			position: relative;
+			top: 0;
+			left: 0;
+			transform: translate(0, 0);
+			width: 100%;
+			padding: 7rem 4rem 4rem 4rem;
+		}
+
+		&__price-box {
+			margin-bottom: 3rem;
+		}
 	}
 }
