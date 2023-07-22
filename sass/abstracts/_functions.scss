@@ -1,3 +1,7 @@
 @function base-font-size($pixels) {
-	@return percentage($pixels/16px);
+	@return percentage(calc($pixels / 16px));
+}
+
+@function calc-em($pixels) {
+	@return calc($pixels / 16px * 1em);
 }

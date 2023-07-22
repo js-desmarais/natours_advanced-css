@@ -74,3 +74,9 @@ $box-shadow-light: 0 0.5rem 2rem rgba($color-black, 0.2);
 $box-shadow-regular: 0 1rem 2rem rgba($color-black, 0.2);
 $box-shadow-bold: 0 1.5rem 4rem rgba($color-black, 0.15);
 $box-shadow-heavy: 0 3rem 6rem rgba($color-black, 0.1);
+
+/// Breakpoints
+$phone: 600px; // 37.5em
+$tab-port: 900px;
+$tab-land: 1200px;
+$big-desktop: 1800px;

@@ -51,3 +51,8 @@ a {
 		outline: $border-thin $color-secondary-dark;
 	}
 }
+
+::selection {
+	background-color: $color-primary;
+	color: $color-white;
+}

@@ -14,6 +14,11 @@
 
 	transition: all 0.3s;
 
+	@supports (backdrop-filter: blur(10px)) {
+		backdrop-filter: blur(10px);
+		background-color: rgba($color-grey-dark-3, 0.3);
+	}
+
 	&__content {
 		@include absolute-centering;
 		background-color: $color-white;

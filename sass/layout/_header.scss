@@ -1,18 +1,23 @@
 @use '../abstracts' as *;
 
 .header {
-	height: 95vh;
+	height: 85vh;
 	background-image: $color-primary-gradient-transparent,
 		url(../img/hero-small.jpg);
 	background-size: cover;
 	background-position: top;
 	position: relative;
 
-	/* NOTE To clip a polygon of the background image */
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+		/* NOTE To clip a polygon of the background image */
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+		height: 95vh;
+	}
 
-	@media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+	@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+		only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+		only screen and (min-width: 125em) {
 		background-image: $color-primary-gradient-transparent, url(../img/hero.jpg);
 	}
 
