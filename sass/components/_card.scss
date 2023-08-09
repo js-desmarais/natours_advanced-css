@@ -6,8 +6,7 @@
 	-moz-perspective: 150rem;
 	position: relative;
 	height: 52rem;
-	border-radius: $border-radius-default;
-	overflow: hidden;
+	// border-radius: $border-radius-default;
 
 	&__side {
 		font-size: 2rem;
@@ -18,8 +17,9 @@
 		left: 0;
 		width: 100%;
 		backface-visibility: hidden;
-		// border-radius: $border-radius-default;
+		border-radius: $border-radius-default;
 		box-shadow: $box-shadow-bold;
+		overflow: hidden;
 
 		&--front {
 			background-color: $color-white;
